@@ -3,10 +3,17 @@ import React, { useState } from 'react';
 // ternary operator
 
 const ShortCircuit = () => {
-  // const firstValue = text || 'hello world';
-  // const secondValue = text && 'hello world';
+  const [text , setText] = useState("k");
 
-  return <h2>short circuit</h2>;
+  const firstValue = text || 'hello world'; // or
+  const secondValue = text && 'hello world';// and
+
+  // we can't display any conditional statements as expression in jsx , we need ternary operator to do so 
+  return <>
+  <h1>value : {firstValue}</h1>
+  <h1> second :{secondValue}</h1>
+  
+  </>;
 };
 
 export default ShortCircuit;
